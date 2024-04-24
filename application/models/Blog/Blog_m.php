@@ -23,6 +23,26 @@ class Blog_m extends CI_Model {
 
     }
 
-}
+    function update_records($data)
+    {
+        $this->db->where('user_id', $data['user_id']); // Specify the condition for updating
+        $this->db->update('user', array(
+            'uname' => $data['uname'],
+            'agee' => $data['agee']
+        ));
+    
+        // Check if the update was successful
+        if ($this->db->affected_rows() > 0) {
+            echo "Success";
+        } else {
+            echo "No records were updated";
+        }
+    }
+
+
+
+      }
+    
+
 
 ?>

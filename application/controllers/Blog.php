@@ -67,7 +67,20 @@ class Blog extends CI_Controller {
         $id=$this->input->get('id');
         //going to model fetching data  of that id nd sending back in view page
         $result['data']=$this->Blog_m->displayrecordsById($id);
-print_r($result);
+        print_r($result);
+
+        if ($this->input->post('update')) {
+            $data = array(
+                'user_id' => $this->input->post('id'),
+                'uname' => $this->input->post('name'),
+                'agee' => $this->input->post('age')
+            );
+
+            // $name=$this->input->post('name');
+            // $age=$this->input->post('age');
+     
+            $this->Blog_m->update_records($data);
+        }
 
         $this->load->view('Blog/update',$result);
     }

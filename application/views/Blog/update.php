@@ -36,7 +36,7 @@
         <label for="age">Age:</label>
         <input type="number" class="form-control" id="age" name="age" value="<?php  echo $data[0]->agee; ?>" placeholder="Enter Age">
       </div>
-      <button type="submit" class="btn btn-primary" name="update">Submit</button>
+      <input type="submit" class="btn btn-primary" name="update">
     </form>
   </div>
 
