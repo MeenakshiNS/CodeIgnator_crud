@@ -17,6 +17,12 @@ class Blog_m extends CI_Model {
       return $query->result();
     }
 
+    function displayrecordsById($id){
+      $query=$this->db->query("select * from user where user_id= '$id'");
+	return $query->result();
+
+    }
+
 }
 
 ?>

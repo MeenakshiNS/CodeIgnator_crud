@@ -61,8 +61,8 @@ td {
       <td><?php echo $res->user_id; ?></td>    
       <td><?php echo $res->uname ?></td> 
       <td><?php echo $res->agee ?></td>     
-      <td><button><a href="">edit</a></button></td>
-      <td><button><a href="">delete</a></button></td>     
+      <td><button><a href="update?id=<?php echo $res->user_id?>">edit</a></button></td>
+      <td><button><a href="delete?id=<?php echo $res->user_id?>">delete</a></button></td>     
     </tr>
   <?php endforeach; ?>
 </tbody>

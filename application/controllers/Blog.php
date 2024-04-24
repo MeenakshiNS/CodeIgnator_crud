@@ -60,5 +60,22 @@ class Blog extends CI_Controller {
 
 
     }
+
+
+    function update(){
+        //getting id from url
+        $id=$this->input->get('id');
+        //going to model fetching data  of that id nd sending back in view page
+        $result['data']=$this->Blog_m->displayrecordsById($id);
+print_r($result);
+
+        $this->load->view('Blog/update',$result);
+    }
+
+    function delete(){
+
+    }
 	
 }
+
+
