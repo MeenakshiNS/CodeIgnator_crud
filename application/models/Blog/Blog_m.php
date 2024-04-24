@@ -39,7 +39,12 @@ class Blog_m extends CI_Model {
         }
     }
 
-
+    function deleterecords($id)
+    {
+      $this->db->where("user_id", $id);
+      $this->db->delete("user");
+      return true;
+    }
 
       }
     

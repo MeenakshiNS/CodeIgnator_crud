@@ -86,6 +86,15 @@ class Blog extends CI_Controller {
     }
 
     function delete(){
+        $id=$this->input->get('id');
+  $response=$this->Blog_m->deleterecords($id);
+  if($response==true){
+    echo "Data deleted successfully !";
+    header("location:listData");
+}
+  else{
+    echo "Error !";
+  }
 
     }
 	
